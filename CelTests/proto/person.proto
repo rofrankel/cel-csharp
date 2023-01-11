@@ -1,0 +1,67 @@
+syntax = "proto3";
+
+package cel.tests;
+
+option csharp_namespace = "Cel.Tests";
+
+import "google/protobuf/struct.proto";
+import "google/protobuf/wrappers.proto";
+
+enum Animal {
+  ANIMAL_UNKNOWN = 0;
+  CAT = 1;
+  DOG = 2;
+  HORSE = 3;
+  COW = 4;
+}
+
+message Person {
+  string given_name = 1;
+  string family_name = 2;
+  repeated string nicknames = 3;
+
+  uint32 age = 4;
+  int32 best_golf_score = 5;
+
+  message Favorites {
+    message Book {
+      string title = 1;
+      string author = 2;
+    }
+    Book book = 1;
+
+    string band = 2;
+
+    int64 number = 3;
+
+    Food food = 4;
+  }
+  Favorites favorites = 6;
+
+  Animal pet = 7;
+  Animal fear = 8;
+
+  enum Food {
+    VEGETABLE_UNKNOWN = 0;
+    CARROT = 1;
+    PEA = 2;
+    POTATO = 3;
+  }
+  repeated Food allergies = 9;
+
+  map<string, string> goals_by_day = 10;
+
+  Job job = 11;
+
+  // WKTs
+  google.protobuf.ListValue dislikes = 100;
+  google.protobuf.Struct stream_of_consciousness = 101;
+
+  // Wrapper WKTs
+  google.protobuf.Int64Value ssn = 110;
+}
+
+message Job {
+  string employer_name = 1;
+  string title = 2;
+}

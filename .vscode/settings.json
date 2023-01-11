@@ -1,0 +1,10 @@
+{
+  "antlr4.generation": {
+    "mode": "external",
+    "language": "CSharp",
+    "listeners": false,
+    "visitors": true,
+    "package": "Cel",
+    "alternativeJar": "../bin/antlr-4.11.1-complete.jar"
+  }
+}
