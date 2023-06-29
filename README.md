@@ -37,6 +37,15 @@ In order to regenerate the parser with VS Code:
 This, combined with the settings in `.vscode/settings.json`, should regenerate
 all the generated C# files.
 
+## Repo status
+
+This is the first .NET code I've ever written, and the first time I've tried to
+implement CEL. Expect newbie mistakes in both domains. This code is complete
+enough to be useful, while also having the significant known gaps described
+above. It was a "hack week" style project I don't have time to maintain; it's
+provided in the hope that someone else will find it a useful starting point for
+a more complete implementation.
+
 <!-- prettier-ignore-start -->
 
 [CEL]: https://github.com/google/cel-spec
